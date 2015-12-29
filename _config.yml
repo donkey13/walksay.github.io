@@ -19,11 +19,6 @@ paginate_path: "/blog/page:num/"
 
 
 collections:
-  portfolio:
+  travel:
     output: true
-    permalink: /portfolio/:path/
-  poetry:
-    output: true
-    permalink: /poetry/:path/
-
-
+    permalink: /travel/:path/

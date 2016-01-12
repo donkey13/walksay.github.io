@@ -1,6 +1,6 @@
 ---
 layout: page
-title: about
+title: zAbout
 permalink: /about/
 ---
 

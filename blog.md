@@ -1,7 +1,8 @@
 ---
 layout: page
+permalink: /posts/
 title: blog
-permalink: /blog/
+description: Showcase your writing, short stories, or poems. Replace this text with your description.
 ---
 
 <ul class="post-list">

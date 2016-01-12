@@ -3,7 +3,7 @@ title: walksay
 email: taodeng0704@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A simple, whitespace, helvetica based portfolio theme.
-baseurl:  /travel/
+baseurl:  /travel
 url:  www.walksay.com
 twitter_username: twitter_username
 github_username:  donkey13

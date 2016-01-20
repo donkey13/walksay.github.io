@@ -14,7 +14,7 @@ highlighter: pygments
 # Pagination
 
 collections:
-  travel:
+  walk:
     output: true
     permalink: /travel/:path/
   blog:

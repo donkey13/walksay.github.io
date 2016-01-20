@@ -17,10 +17,10 @@ paginate_path: "/travel/page:num/"
 
 
 collections:
-  portfolio:
+  posts:
     output: true
     permalink: /posts/:path/
-  poetry:
+  blog:
     output: true
     permalink: /blog/:path/
 

@@ -16,7 +16,7 @@ highlighter: pygments
 collections:
   walk:
     output: true
-    permalink: /travel/:path/
+    permalink: /walk/:path/
   blog:
     output: true
     permalink: /blog/:path/

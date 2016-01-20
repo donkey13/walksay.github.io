@@ -14,9 +14,9 @@ highlighter: pygments
 # Pagination
 
 collections:
-  travel:
-    output: true
-    permalink: /travel/:path/
+  #travel:
+    #output: true
+    #permalink: /travel/:path/
   blog:
     output: true
     permalink: /blog/:path/

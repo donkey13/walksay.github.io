@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /blog/
-title: poetry
+title: blog
 description: Showcase your writing, short stories, or poems. Replace this text with your description.
 ---
 

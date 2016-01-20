@@ -17,8 +17,8 @@ collections:
   walk:
     output: true
     permalink: /walk/:path/
-  blog:
+  say:
     output: true
-    permalink: /blog/:path/
+    permalink: /say/:path/
 
 

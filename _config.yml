@@ -12,14 +12,11 @@ markdown: kramdown
 highlighter: pygments
 
 # Pagination
-paginate: 15
-paginate_path: "/travel/page:num/"
-
 
 collections:
-  posts:
+  travel:
     output: true
-    permalink: /posts/:path/
+    permalink: /travel/:path/
   blog:
     output: true
     permalink: /blog/:path/

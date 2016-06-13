@@ -1,8 +1,8 @@
 ---
 layout: post
-title: hard to start
+title: 艰难的开始
 date: 2016-06-12 15:09:00
-description: hard to perfect
+description: grass is also life
 ---
 计划是隔三差五要写一些东西在这里的
 

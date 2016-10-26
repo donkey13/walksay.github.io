@@ -1,29 +1,21 @@
 ---
 layout: post
-title: Project
-description: a project with a background image
-img: /img/12.jpg
+title: 梅里雪山
+description: 05年7月与小伙伴浪迹在滇西北的日子
+img: http://pic.yupoo.com/donkey/5364053aca2e/medish.jpg
 ---
 
-Every project has a beautiful feature shocase page. It's easy to include images, in a flexible 3-column grid format. Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so: 
-
-	---
-	layout: post
-	title: Project
-	description: a project with a background image
-	img: /img/12.jpg
-	---
+梅里这个名字非常好听，虽然最高峰只有6700多米，但至今无人登顶
+05年只花了2000多块就在云南浪荡了一个多月，从大理丽江一直到虎跳峡，中甸德钦梅里雪山，囊中羞涩的旅程，但有纯粹的快活
 
 
 <div class="img_row">
-	<img class="col one" src="{{ site.baseurl }}/img/1.jpg" alt="" title="example image"/>
-	<img class="col one" src="{{ site.baseurl }}/img/2.jpg" alt="" title="example image"/>
-	<img class="col one" src="{{ site.baseurl }}/img/3.jpg" alt="" title="example image"/>
+	<img class="col one" src="http://pic.yupoo.com/donkey/4065353aca2d/uomrwejr.jpg"" title="example image"/>
+	<img class="col one" src="http://pic.yupoo.com/donkey/1712153aca2e/medish.jpg" alt="" title="example image"/>
+	<img class="col one" src="http://pic.yupoo.com/donkey/9766353aca2e/medish.jpg" alt="" title="example image"/>
 </div>
 <div class="col three caption">
-	Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+	很好的运气，因为第一次去就看到了神山梅里
 </div>
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/5.jpg" alt="" title="example image"/>

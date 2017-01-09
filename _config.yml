@@ -9,7 +9,7 @@ github_username:  donkey13
 # Build settings
 markdown: kramdown
 
-highlighter: pygments
+highlighter: rouge
 
 # Pagination
 

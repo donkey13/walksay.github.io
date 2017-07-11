@@ -20,5 +20,8 @@ collections:
   say:
     output: true
     permalink: /say/:path/
+  tech:
+    output: true
+    permalink: /tech/:path/
 
 

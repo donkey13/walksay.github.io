@@ -1,0 +1,95 @@
+---
+layout: post
+title: Promise.map memory issue
+date: 2017-08-08 19:57:00
+description: The Using of FreeMarker
+---
+
+What is Apache FreeMarker?
+http://freemarker.org/
+
+![](http://freemarker.org/images/overview.png)
+
+Apache FreeMarker是一个模板引擎：一个基于预定义模板来生成文本输出（HTML网页、电子邮件、配置文件、源代码等）的Java API。
+
+1. 新建项目 在项目根目录下新建"template"文件夹，用来存放我们的Template file,
+如我们新建模板文件test.ftl
+
+```
+<html>  
+<head>  
+<title>Welcome!</title>  
+</head>  
+<body>  
+<h1>Welcome ${user}<#if user == "Big Joe">, our beloved leader</#if>! </h1>  
+<p>Our latest product:  
+<a href="${latestProduct.url}">${latestProduct.name}</a>!  
+</body>  
+</html>
+``` 
+
+2. 项目引入freemarker.jar（下载地址：https://jarfiles.pandaidea.com/freemarker.html），在Java类中使用FreeMarker API方法引用模板文件、创建数据模型、合并数据模型与模板文件最终输入
+
+```
+import java.io.File;  
+import java.io.IOException;  
+import java.io.OutputStreamWriter;  
+import java.io.Writer;  
+import java.util.HashMap;  
+import java.util.Map;  
+  
+import freemarker.template.Configuration;  
+import freemarker.template.DefaultObjectWrapper;  
+import freemarker.template.Template;  
+import freemarker.template.TemplateException;  
+  
+public class HtmlGeneratorClient {  
+public static void main(String[] args) {  
+        try {  
+            Configuration cfg = new Configuration();  
+            // 指定模板文件从何处加载的数据源，这里设置成一个文件目录  
+            cfg.setDirectoryForTemplateLoading(new File("./template"));  
+            cfg.setObjectWrapper(new DefaultObjectWrapper());  
+              
+            // 获取或创建模板  
+            Template template = cfg.getTemplate("test.ftl");  
+              
+            // 创建数据模型  
+            Map root = new HashMap();  
+            root.put("user", "Big Joe");          
+            Map latest = new HashMap();  
+            root.put("latestProduct", latest);  
+            latest.put("url", "products/greenmouse.html");  
+            latest.put("name", "green mouse");  
+              
+            // 将模板和数据模型合并 输出到Console  
+            Writer out = new OutputStreamWriter(System.out);  
+            template.process(root, out);  
+            out.flush();  
+              
+        } catch (IOException e) {  
+            e.printStackTrace();  
+        } catch (TemplateException e) {  
+            e.printStackTrace();  
+        }  
+    }  
+}
+```
+
+3. 最终生成的HTML的页面代码如下：
+```
+<html>  
+<head>  
+<title>Welcome!</title>  
+</head>  
+<body>  
+<h1>  
+Welcome Big Joe, our beloved leader!  
+</h1>  
+<p>Our latest product:  
+<a href="products/greenmouse.html">green mouse</a>!  
+</body>  
+</html>   
+```
+
+http://blog.csdn.net/janice0529/article/details/42193235

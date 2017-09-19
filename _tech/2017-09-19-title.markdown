@@ -1,8 +1,8 @@
 ---
 layout: post
-title: is there any one believe that 47 is not enough?
+title: 47 steps on project managment
 date: 2017-08-08 19:57:00
-description: 47 steps on project managment
+description: is there any one believe that 47 is not enough?
 ---
 
 # 项目启动 #

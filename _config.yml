@@ -1,0 +1,27 @@
+# Site settings
+title: walksay
+email: taodeng0704@gmail.com
+description: travel suggestion
+baseurl: 
+url: www.walksay.com
+github_username:  donkey13
+
+# Build settings
+markdown: kramdown
+
+highlighter: rouge
+
+# Pagination
+
+collections:
+  walk:
+    output: true
+    permalink: /walk/:path/
+  say:
+    output: true
+    permalink: /say/:path/
+  tech:
+    output: true
+    permalink: /tech/:path/
+
+

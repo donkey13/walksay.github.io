@@ -1,0 +1,32 @@
+---
+layout: post
+title: Promise.map memory issue
+date: 2017-07-05 19:27:00
+description: use _.churk() to resolve
+---
+
+When use the Promise.map() to iterate a list, the memory will not be freed up until the all the task finished.
+That means the GC only works after the callback of the Promise.map().
+When the list is huge, there will be a big problem on memory usage.
+
+To avoid this issue, can use _.churk() to spilt the huge list to small one. And use the Promise.map() to iterate the small list. There will no memory issue any more."
+
+Ref to the following sample code:
+
+    function map(list, fn, option) {
+    var concurrency = list.length;
+    if (option && option.concurrency){
+    concurrency = option.concurrency;
+    }
+    var chunk = _.chunk(list, concurrency);
+    return mapChunk(chunk, 0, fn);
+    }
+ 
+    function mapChunk(chunk, i, fn) {
+    return Promise.map(chunk[i], fn)
+    .then(() => Promise.delay(1).then(() => {
+    i++; if (i < chunk.length) {
+    return mapChunk(chunk, i, fn);
+    } else {
+    return Promise.resolve();
+    }});}

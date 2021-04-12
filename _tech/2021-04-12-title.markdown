@@ -1,0 +1,24 @@
+---
+layout: post
+title: how to accerlerate github
+date: 2021-04-12 22:31:00
+description: not easy coding in china
+---
+
+一、有梯子用这个：
+
+这个是今天看到一篇文章里说的， 原文链接 ： https://zhuanlan.zhihu.com/p/129257729。 但梯子不一样，所以对应的端口不一样。你需要做的就是找到梯子对应的socket端口，然后再设置下git的代 理配置：  
+
+git config --global http.https://github.com.proxy socks5://127.0.0.1:7891
+
+二、没梯子用这个
+
+这个方法非常简单，什么都不用设置，只需要在链接的 github.com 后插入‘.cnpmjs.org’，其它不变。 用上面clone的链接做示例：
+
+git clone https://github.com/cpselvis/geektime-webpack-course.git
+
+# 改为
+
+git clone https://github.com.cnpmjs.org/cpselvis/geektime-webpack-course.git
+
+发现一个更好的方法，不需要梯子，也不用自己改地址。目前最好的方法吧。 使用chrome浏览器，安装一个插件【Github 加速器】
